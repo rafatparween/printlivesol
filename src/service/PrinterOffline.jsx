@@ -2,11 +2,11 @@ import React from 'react';
 
 const PrinterSetup = () => {
   return (
-    <main className="flex justify-center items-center p-5">
-      <section className="border w-[95%] p-10 bg-gray-100 shadow-xl">
+    <main className="flex justify-center items-center p-5 ">
+      <section className="border w-[95%] p-10 bg-gray-100 shadow-xl ]">
         {printerSetupContent.map((item) => (
           <div key={item.id} className="my-8">
-            <h2 className="text-2xl font-bold mb-4">{item.head}</h2>
+            <h2 className="text-2xl font-bold mb-4 text-[#1E3A8A]">{item.head}</h2>
             {item.description && (
               <p className="text-lg mb-4">{item.description}</p>
             )}

@@ -9,21 +9,8 @@ const Disclaimer = () => {
             Disclaimer
           </h1>
           <div className=" p-6">
-            <p className="text-gray-700 mb-4">
-              Users are strongly encouraged to carefully review and thoroughly
-              understand the disclaimer. Infoprintsolution aims to furnish
-              comprehensive information specifically concerning printers to aid
-              users in troubleshooting any issues they encounter while utilizing
-              these devices. Infoprintsolution.com maintains no affiliation with
-              any brand, is not involved in any Associate program or affiliate
-              advertising program, and does not endorse any products, brands, or
-              software. Additionally, we do not facilitate access to external
-              links. Should you encounter any external links leading to our
-              website, please inform us promptly, and we will promptly remove
-              them. It's important to note that at Infoprintsolution, brand
-              names and product logos are used solely for representational
-              purposes. We disclaim responsibility for any external content or
-              links.
+            <p className="text-gray-700 mb-4 h-[80px] text-[14px]">
+              PrintLiveSol.com operates as a completely independent third-party company, unaffiliated with any printer brand and not involved in associate programs, affiliate advertising, or product endorsements. We strive to provide comprehensive printer information, but cannot guarantee its absolute accuracy or compatibility with your specific model. We strongly recommend users carefully review this disclaimer to understand the information presented. Additionally, we do not host external links on our website. If you encounter any, please inform us for prompt removal. Brand names and logos are used solely for representation and do not imply endorsement. Ultimately, users are responsible for ensuring the compatibility of any printer content (cartridges, toner, etc.) with their device. We recommend consulting your printer manual or manufactures website for definitive compatibility information.
             </p>
           </div>
         </div>
