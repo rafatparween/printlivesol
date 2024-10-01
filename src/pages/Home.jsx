@@ -355,6 +355,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPrint, faWifi, faTint, faCogs, faExclamationTriangle, faTools, faFax } from '@fortawesome/free-solid-svg-icons';
 // Remove Image import if not using Next.js
+import { Link } from 'react-router-dom';
 import PrinterSetup from '../service/PrinterOffline';
 import CustomerReviews from './CustomerReviews';
 import Disclaimer from './Disclaimer';
@@ -367,7 +368,8 @@ import Help from './Help';
 const Home = () => {
   return (
     <>
-      <div className="bg-gradient-to-br from-[#003366] to-[#006699] min-h-screen flex items-center justify-center relative overflow-hidden">
+      <h1 className='text-[30px] text-center text-[#003366]'>Diagnose & Solve</h1>
+      <div className="bg-gradient-to-br from-[#003366] to-[#006699] h-[600px] flex items-center justify-center relative overflow-hidden">
         {/* Dots in Top Left Corner with Animation */}
         <div className="absolute top-5 left-5 flex flex-col items-start space-y-2 z-20">
           {Array.from({ length: 8 }, (_, rowIndex) => (
@@ -382,22 +384,25 @@ const Home = () => {
             </div>
           ))}
         </div>
+       
 
         <div className="container mx-auto p-8 flex flex-row items-start relative z-10 space-x-8">
           {/* Left Side - Icons */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 h-[421px] w-[1237px]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 h-[320px] w-[1237px]">
             {[
-              { name: 'Printer Setup', icon: faPrint, color: '#ffcc00' },
-              { name: 'Printer Offline', icon: faCogs, color: '#ff6699' },
-              { name: 'Wireless Printer', icon: faWifi, color: '#66ccff' },
-              { name: 'Ink Not Printing', icon: faTint, color: '#ff9933' },
-              { name: 'Scanner Issues', icon: faPrint, color: '#ff6699' },
-              { name: 'Fax Problems', icon: faFax, color: '#66ccff' },
+              { name: 'Printer Setup', icon: faPrint, color: '#ffcc00', route: '/Printer' },
+              { name: 'Printer Offline', icon: faCogs, color: '#ff6699', route: '/Offline' },
+              { name: 'Wireless Printer', icon: faWifi, color: '#66ccff', route: '/Wireless' },
+              { name: 'Color Or Black Ink Not Printing', icon: faTint, color: '#ff9933', route: '/Ink' },
+              { name: 'Scanner', icon: faPrint, color: '#ff6699', route: '/Scanner' },
+              { name: 'Fax Issues ', icon: faFax, color: '#66ccff', route: '/Fax' },
             ].map((item) => (
-              <div key={item.name} className="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-110">
-                <FontAwesomeIcon icon={item.icon} className="text-4xl mb-4" style={{ color: item.color }} />
-                <p className="text-lg font-semibold text-gray-800">{item.name}</p>
-              </div>
+              <Link to={item.route} key={item.name}>
+                <div className="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-110 h-[166px]">
+                  <FontAwesomeIcon icon={item.icon} className="text-4xl mb-4" style={{ color: item.color }} />
+                  <p className="text-lg font-semibold text-gray-800">{item.name}</p>
+                </div>
+              </Link>
             ))}
           </div>
 
@@ -411,27 +416,9 @@ const Home = () => {
           </div>
         </div>
         <br/>
-
-        {/* New Row for Printer Logos */}
-        {/* <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center pt-[40px]">
-          {[
-            { src: '/hp.png', logo: '/hplogo.png', alt: 'HP Printer' },
-            { src: '/canon.png', logo: '/canonlogo.png', alt: 'Canon Printer' },
-            { src: '/epson.png', logo: '/epsonlogo.png', alt: 'Epson Printer' },
-            { src: '/brother.png', logo: '/brotherlogo.png', alt: 'Brother Printer' },
-          ].map((printer) => (
-            <div key={printer.alt} className="flex flex-col items-center">
-              <img src={printer.src} alt={printer.alt} width={287} height={287} />
-              <span className="flex items-center justify-center bg-white cursor-pointer w-[200px] h-[55px] rounded-[30px] relative inline-block">
-                <img src={printer.logo} alt={`${printer.alt} Logo`} width={93} height={28} />
-              </span>
-            </div>
-          ))}
-        </div> */}
-
-        {/* Bottom Chat Assistance */}
-        <div className="absolute bottom-10">
-          <button className="bg-[#005f8c] text-white font-bold rounded-full py-3 px-6 shadow-md hover:bg-[#004e7a] transition-all duration-300 ease-in-out">
+      {/* Bottom Chat Assistance */}
+        <div className=" absolute bottom-10 ">
+          <button className="bg-[#005f8c] text-white font-bold rounded-full py-3 px-6 shadow-md hover:bg-[#004e7a] transition-all duration-300 ease-in-out ">
             Click For Chat Assistance
           </button>
         </div>
@@ -467,5 +454,8 @@ const Home = () => {
 };
 
 export default Home;
+
+
+
 
 

@@ -230,18 +230,18 @@
 // export default PrinterSetup;
 
 
-function PrinterSetup(){
-  return(
-    <>
-        {/* <img src="https://geekautobuzz.com/wp-content/uploads/2024/09/comptia.png"/> */}
-    <div>
-      <img
-        src="https://geekautobuzz.com/wp-content/uploads/2024/09/comp-1.png"
-        alt="system image"
-      />
-      </div>
-    </>
-  )
-}
-export default PrinterSetup;
+// function PrinterSetup(){
+//   return(
+//     <>
+//         {/* <img src="https://geekautobuzz.com/wp-content/uploads/2024/09/comptia.png"/> */}
+//     <div>
+//       <img
+//         src="https://geekautobuzz.com/wp-content/uploads/2024/09/comp-1.png"
+//         alt="system image"
+//       />
+//       </div>
+//     </>
+//   )
+// }
+// export default PrinterSetup;
 

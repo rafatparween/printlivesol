@@ -15,19 +15,19 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            to="/printeroffline"
+            to="/Offline"
             className="hover:border border-[#3730a3] p-2 rounded"
           >
             Printer Offline
           </Link>
           <Link
-            to="/printersetupissue"
+            to="/Printer"
             className="hover:border border-[#3730a3] p-2 rounded"
           >
             Printer Setup
           </Link>
           <Link
-            to="/printerscannersetup"
+            to="/Scanner"
             className="hover:border border-[#3730a3] p-2 rounded"
           >
             Scanner Setup
